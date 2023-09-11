@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/screen/createtask.dart';
 import 'package:todo_app/screen/deletetask.dart';
 import 'package:todo_app/screen/readtask.dart';
+import 'package:todo_app/screen/tasklist.dart';
 import 'package:todo_app/screen/updatetask.dart';
 
 class TodoApp extends StatefulWidget {
@@ -69,8 +70,10 @@ class _TodoAppState extends State<TodoApp> {
                 ),
                 InkWell(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => UpdateTask()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => TaskListScreen()));
                   },
                   child: Container(
                     margin: const EdgeInsets.all(20),
